@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and link daytimetcpsrv",
+      "type": "shell",
+      "command": "clang-19",
+      "args": [
+        "-I../lib",
+        "-g",
+        "-O2",
+        "-D_REENTRANT",
+        "-Wall",
+        "-o",
+        "daytimetcpsrv",
+        "daytimetcpsrv.c",
+        "../libunp.a",
+        "-lpthread"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/intro"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
+}

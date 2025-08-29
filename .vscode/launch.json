@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug daytimetcpsrv",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/intro/daytimetcpsrv",
+      "args": [], // 可以传入程序参数
+      "stopAtEntry": false, // true 表示程序启动就停
+      "cwd": "${workspaceFolder}/intro", // 工作目录
+      "environment": [],
+      "externalConsole": false, // true 打开终端窗口调试
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb", // gdb 路径
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
